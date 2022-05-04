@@ -2,7 +2,7 @@
 pip install -r requirements.txt
 "Analyzing Real and Imaginary Motor Movements Using Electroencephalograms"
 
-This project was done for course Advances in Information Sciences and Engineering (11480) 
+This project was done for course 11480 at the University of Canberra
 
 **If you want to run this for yourself:**
 
