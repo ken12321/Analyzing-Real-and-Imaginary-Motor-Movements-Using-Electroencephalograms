@@ -5,7 +5,7 @@ import ast
 import math
 
 from sklearn import metrics
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 
 
 from clean_dataset import extractCsvDataToArray
@@ -24,7 +24,7 @@ print("here")
 # test_data = test_data.reshape((nsamples,nx*ny))
 
 # build the model with given parameters
-regressor = RandomForestRegressor(n_estimators=30, random_state=0)
+regressor = RandomForestClassifier(n_estimators=30, random_state=0)
 
 regressor.fit(train_data, train_data_labels)  # train the model
 

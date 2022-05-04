@@ -1,8 +1,6 @@
 import mne
-import os
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 
 # Dataset info:
@@ -44,12 +42,13 @@ def prepareSubjectData(NUM_SUBJECTS):
         getSubjectTask(subjectId, 1)  # Task one - subjects really open and close fists
         getSubjectTask(subjectId, 2)  # Task two - subjects imagine opening and closing fists
 
-        # Progress bar for preparing dataset
+        # Progress bar for preparing dataset, useful as extracting data can take a long time
         progress = i/NUM_SUBJECTS
         print("Progress: {progress_num}%".format(progress_num=round(progress * 100, 2)))
 
 
 def getSubjectTask(subId, taskNum):
+    # Determines whether to use the imaginary task list or real task list
     if taskNum == 1:
         task_list = TASK_ONE_REAL
         task_type = "REAL"
@@ -57,6 +56,7 @@ def getSubjectTask(subId, taskNum):
         task_list = TASK_TWO_IMAGINE
         task_type = "IMAGINE"
 
+    # Gets all of the related tasks from task array
     for i in task_list:
         formatted_task_num = '{:02d}'.format(i)
         pathName = "./files/{subId}/{subId}R{task_num}.edf".format(subId = subId, task_num = formatted_task_num)

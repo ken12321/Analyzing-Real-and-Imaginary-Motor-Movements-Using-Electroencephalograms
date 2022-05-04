@@ -30,7 +30,7 @@ def readCsvData(data_files):
 
 
 def extractCsvDataToArray():
-    # Creates an array of the filenames with their corrosponding label
+    # Creates an array of the filenames with their corresponding label
     legend_train = pd.read_csv("./data_extracted/LEGEND_REAL.csv")
     legend_test = pd.read_csv("./data_extracted/LEGEND_IMAGINE.csv")
 
@@ -41,6 +41,7 @@ def extractCsvDataToArray():
     # Creates arrays of the data contained in csv files, and indexes of eliminated data
     test_data, test_elim = readCsvData(test_data_files)
     train_data, train_elim = readCsvData(train_data_files)
+
 
     def extractFeatures(data):
         extracted_features = []
@@ -75,31 +76,3 @@ def extractCsvDataToArray():
     print("Finished reading data...")
     return test_data, test_labels, train_data, train_labels
 
-
-
-def Testing():  # This function can be removed, is only used for testing purposes
-    test = ["right", "left", "rest", "right", "left", "rest", "right", "left", "rest"]
-    test_labels = np.asarray(test)
-    print(test_labels)
-    a = np.delete(test_labels, [1, 4, 5], None)
-    print(a)
-
-#Testing()
-
-
-
-
-
-    # test = []
-    # for entity in test_data:
-    #     feature_array = []
-    #     for feature in entity:
-    #         feature_array.append(np.array(entity[feature], dtype=float))
-    #     test.append(feature_array)
-    #
-    # train = []
-    # for entity in train_data:
-    #     feature_array = []
-    #     for feature in entity:
-    #         feature_array.append(np.array(entity[feature], dtype=float))
-    #     train.append(feature_array)
