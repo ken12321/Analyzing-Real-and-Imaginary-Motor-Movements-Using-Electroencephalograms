@@ -9,16 +9,16 @@ import pandas as pd
 
 # 1. Baseline, eyes open
 # 2. Baseline, eyes closed
-# 3. Task 1 (open and close left or right fist)
-# 4. Task 2 (imagine opening and closing left or right fist)
+# 3. Task 1 (open and close left or right fist) <--
+# 4. Task 2 (imagine opening and closing left or right fist) <--
 # 5. Task 3 (open and close both fists or both feet)
 # 6. Task 4 (imagine opening and closing both fists or both feet)
-# 7. Task 1
-# 8. Task 2
+# 7. Task 1 <--
+# 8. Task 2 <--
 # 9. Task 3
 # 10. Task 4
-# 11. Task 1
-# 12. Task 2
+# 11. Task 1 <--
+# 12. Task 2 <--
 # 13. Task 3
 # 14. Task 4
 
